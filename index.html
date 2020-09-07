@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&display=swap" rel="stylesheet">
+<head>
+	<title>Counter</title>
+	<style type="text/css">
+		body{
+			background: #26734d;
+			font-family: 'Merriweather', serif;
+		}
+	    .header h1{
+			font-size: 6rem;
+			margin-top: 3rem;
+			text-align: center;
+		}
+		.box span{
+			margin-left: 40rem;
+			text-align: center;
+			margin-bottom: 2rem;
+			margin-top: 1rem;
+			font-size: 7rem;
+		}
+		section{
+			text-align: center;
+		}
+		#subtract{
+			border: outset black;
+			cursor: pointer;
+			border-radius: 2rem;
+			background-color: #66cc99;
+			margin-top: 3rem;
+			font-size: 3rem;
+			width: 5rem;
+			height: 5rem;
+		}
+		#add{
+			border: outset black;
+			cursor: pointer;
+			border-radius: 2rem;
+			background-color: #66cc99;
+			margin-top: 3rem;
+			margin-left: 3rem;
+			font-size: 3rem;
+			width: 5rem;
+			height: 5rem;
+		}
+		.footer p{
+		 	font-family: 'roboto';
+			margin-left: 35.5rem;
+			margin-top: 3rem;
+			font-weight: bolder;
+			font-size: 20px;	
+}
+@media only screen and (max-width: 600px){
+	.box span{
+		margin-left: 13.8rem;
+	}
+	.footer p{
+		margin-left: 8rem;
+	}
+}
+@media only screen and (min-width: 600px){
+	.box span{
+		margin-left: 22rem;
+	}
+	.footer p{
+		margin-left: 16rem;
+	}
+}
+@media only screen and (min-width: 768px){
+	.box span{
+		margin-left: 28rem;
+	}
+	.footer p{
+		margin-left: 23rem;
+	}
+}
+@media only screen and (min-width: 992px){
+	.box span{
+		margin-left: 40rem;
+	}
+	.footer p{
+		margin-left: 35.5rem;
+	}
+}	
+	</style>
+</head>
+<body>
+	<div class="header">
+		<h1>Counter</h1>
+	</div>
+	<div class="box">
+		<span id="count">0</span>
+	</div>
+	<br>
+	<section>
+		<button id="subtract">-</button>
+		<button id="add">+</button>
+	</section>
+	<br>
+	<div class="footer">
+		<p>&#169; <script> document.write(new Date().getFullYear())</script> Md Sohail uddin</p>
+	</div>
+	<script type="text/javascript">
+		var num = 0;
+		var count = document.getElementById('count');
+		var inc = document.getElementById('add');
+		inc.addEventListener('click',() => {
+		num+=1;
+		count.innerHTML = num;
+	});
+		var dec = document.getElementById('subtract');
+		dec.addEventListener('click',() => {
+		num-=1;
+		count.innerHTML = num;
+	});
+	</script>
+</body>
+</html>
+
+
+<!--DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&display=swap" rel="stylesheet">
+<head>
+	<title>Inc and Dec Counter</title>
+	<style type="text/css">
+		body{
+			font-family: 'Merriweather', serif;
+		}
+		.header h1{
+			font-size: 5rem;
+			text-align: center;
+		}
+	    .box{
+	    	margin-left: 29.5rem;
+	    	margin-top: 4rem;
+			height: 22rem;
+			width: 25rem;
+			border: 3px solid blue;
+			border-radius: 10px;
+		}
+	    .box span{
+			text-align: center;
+			padding-left: 1.5rem;
+			margin-bottom: 2rem;
+			margin-top: 2rem;
+			font-size: 7rem;
+		}
+		.btn-group button{
+			text-align: center;
+			width: 3rem;
+			height: 3rem;
+			border-radius: 4px;
+			color: #000;
+			cursor: pointer;
+			float: left;
+			font-size: 3rem;
+		}
+		button #add{
+			margin-top: 40px;
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<h1>Counter</h1>
+	</div>
+	<div class="box">
+		<span id="count">0</span>
+	<div class="btn-group">
+		<button id="minus"> - </button>
+	</div>
+	<div class="btn-group">
+		<button id="add"> + </button>
+	</div>
+</div>
+	<script type="text/javascript">
+	var num = 0;
+	var count = document.getElementById('count');
+	var inc = document.getElementById('add');
+	inc.addEventListener('click',() => {
+		num+=1;
+		count.innerHTML = num;
+	});
+	var dec = document.getElementById('minus');
+	dec = count.innerHTML;
+	dec.addEventListener('click',() => {
+		dec=-1;
+		count.innerHTML = dec;
+
+	})	
+	</script>
+</body>
+</html-->
